@@ -11,10 +11,8 @@ def read_json(file_path):
     return data
 
 file_path = 'object_list.json'
-
 # Read JSON file
 data = read_json(file_path)
-
 # Extract news information
 news_list = extract_news_info(data)
 
@@ -53,7 +51,6 @@ def extract_keywords(details_news, languages=None):
 
     # Extract keywords from the API response
     keywords = response[0].key_phrases
-
     # Limit the number of keywords (adjust as needed)
     max_keywords = 400
     keywords = keywords[:max_keywords]
@@ -63,21 +60,17 @@ def extract_keywords(details_news, languages=None):
 def get_user_input():
     title = input("Enter your interest title: ")
     request = input("Enter your interest request or information: ")
-    
     return title, request
 
 def extract_User_Theme_keywords(text, text_analytics_client):
     # Call the Text Analytics API to analyze the document and extract key phrases
-    response = text_analytics_client.extract_key_phrases([text])
-    
+    response = text_analytics_client.extract_key_phrases([text])    
     # Check for errors in the response
     if response.errors:
         print("Error in Text Analytics API response:", response.errors)
         return []
-    
     # Extract keywords from the API response
     keywords = response[0].key_phrases
-    
     return keywords
 
 
