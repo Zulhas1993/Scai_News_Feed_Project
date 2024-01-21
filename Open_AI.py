@@ -55,9 +55,6 @@ def extract_keywords(text, languages=None):
     # Initialize the Text Analytics client
     credential = AzureKeyCredential(key)
     text_analytics_client = TextAnalyticsClient(endpoint, credential)
-
-
-
     # Detect language
     language_detection_response = text_analytics_client.detect_language([text])
     
