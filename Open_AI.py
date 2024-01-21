@@ -152,14 +152,14 @@ def analysis_and_recommendation():
         questions_and_options_list.append(question_dict)
 
     # Print or save the extracted data
-    print("Extracted Data:")
-    print(questions_and_options_list)
+    #print("Extracted Data:")
+    #print(questions_and_options_list)
 
     # Generate a summary article based on personal information and interests
     summary_article = generate_summary_article(personal_information, personal_interest)
     # print("\nSummary Article:")
     # print(summary_article)
-    # print(modified_response)
+    print(modified_response)
     
 # Function to generate a summary article
 def generate_summary_article(personal_information, personal_interest):
