@@ -54,6 +54,7 @@ def extract_key_phrases(text, text_analytics_client):
     return response[0].key_phrases
 
 # Perform LDA topic modeling
+#https://www.analyticsvidhya.com/blog/2023/02/topic-modeling-using-latent-dirichlet-allocation-lda/
 #The perform_lda function in the code uses Latent Dirichlet Allocation (LDA),
 # which is a generative probabilistic model commonly used for topic modeling.
 def perform_lda(texts, num_topics=5):

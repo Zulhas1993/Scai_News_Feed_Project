@@ -91,7 +91,7 @@ if __name__ == "__main__":
     save_news_details_to_doc(news_list, output_file='news_details.docx')
     
     # Save links with details to a Word document
-    Get_Ex_links(news_list, output_file='links.docx')
+    get_ex_links(news_list, output_file='links.docx')
     
     print("News details saved to 'news_details.docx'")
     print("Links with details saved to 'links.docx'")

@@ -23,7 +23,7 @@ for news in news_list:
     details_news = get_news_details(link)
     
     # Now you can use 'details_news' as needed
-    print(details_news)
+    #print(details_news)
 
 def extract_keywords(details_news, languages=None):
     endpoint = "https://laboblogtextanalytics.cognitiveservices.azure.com/"
@@ -57,21 +57,23 @@ def extract_keywords(details_news, languages=None):
     return keywords
 
 
-def get_user_input():
-    title = input("Enter your interest title: ")
-    request = input("Enter your interest request or information: ")
-    return title, request
+# def get_user_input():
+#     title = input("Enter your interest title: ")
+#     request = input("Enter your interest request or information: ")
+#     return title, request
 
-def extract_User_Theme_keywords(text, text_analytics_client):
-    # Call the Text Analytics API to analyze the document and extract key phrases
-    response = text_analytics_client.extract_key_phrases([text])    
-    # Check for errors in the response
-    if response.errors:
-        print("Error in Text Analytics API response:", response.errors)
-        return []
-    # Extract keywords from the API response
-    keywords = response[0].key_phrases
-    return keywords
+
+
+# def extract_User_Theme_keywords(text, text_analytics_client):
+#     # Call the Text Analytics API to analyze the document and extract key phrases
+#     response = text_analytics_client.extract_key_phrases([text])    
+#     # Check for errors in the response
+#     if response.errors:
+#         print("Error in Text Analytics API response:", response.errors)
+#         return []
+#     # Extract keywords from the API response
+#     keywords = response[0].key_phrases
+#     return keywords
 
 
 
